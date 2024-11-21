@@ -5,7 +5,7 @@ function App() {
     <div className="background">
     <header className="header">
       <div className="logo">
-        <img src={"src/assets/servicesjmk_azul.png"} alt="Services JMK Logo" />
+        <img src="/servicesjmk_azul.png"  alt="Services JMK Logo" />
       </div>
       <nav className="nav">
         <ul className="nav-list">
