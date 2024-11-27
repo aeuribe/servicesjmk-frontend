@@ -20,14 +20,14 @@ body {
   width: 100%;
   min-height: 100%; /* Asegura que el contenedor ocupe al menos toda la pantalla */
   background: linear-gradient(45deg, #1B1B2F, #53354A);
+  animation: backgroundShift 5s ease infinite;
 }
 
 
-/**@keyframes backgroundShift {
-  0% { background: linear-gradient(to right, #1B1B2F, #53354A); }
-  50% { background: linear-gradient(to right, #151527, #402D3E); }
-  100% { background: linear-gradient(to right, #1B1B2F, #53354A); }
-}**/
+@keyframes backgroundShift {
+  0% {background: linear-gradient(to right, #1B1B2F);}
+  100% {background: linear-gradient(to right, #53354A);}
+}
 
 
 
@@ -218,7 +218,7 @@ h1 {
 }
 
 .nav-item .nav-link:hover {
-  color: #53354A ; /* Cambia el color al pasar el mouse */
+  color: #1B1B2F ; /* Cambia el color al pasar el mouse */
 }
 
 /* Responsividad para dispositivos móviles */
