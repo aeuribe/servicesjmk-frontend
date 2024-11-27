@@ -24,8 +24,8 @@ body {
 }
 
 @keyframes backgroundShift {
-  0%, 100% { background: #4656f5; }
-  50% { background: #171a3a; }
+  0%, 100% { background: #39497a ; }
+  50% { background: #d0546a ; }
 }
 
 .main-content {

@@ -5,7 +5,7 @@ function App() {
     <div className="background">
     <header className="header">
       <div className="logo">
-        <img src="/servicesjmk_azul.png"  alt="Services JMK Logo" />
+        <img src="/servicesjmk.png"  alt="Services JMK Logo" />
       </div>
       <nav className="nav">
         <ul className="nav-list">
@@ -23,7 +23,7 @@ function App() {
     </header>
       <div className="linea-separadora"></div>
       <main className="main-content">
-        <p>Something great is on the way</p>
+        <p>We're preparing for the next step</p>
         <h1>COMING SOON</h1>
           <div className="spacer"></div>
       </main>
