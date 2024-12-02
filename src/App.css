@@ -1,35 +1,19 @@
-
-html, body, #root {
-  height: 100%; /* Asegura que todo ocupe la altura completa del viewport */
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+*{
+  border: 1px solid red
 }
 
-body {
-  display: flex;
-  flex-direction: column; /* Distribuye los hijos verticalmente */
-  min-height: 100%; /* Garantiza que el contenido ocupe al menos toda la pantalla */
-  margin: 0;
-  overflow-x: hidden; /* Evita el desbordamiento horizontal */
+body{
+  margin:0;
 }
 
 .background {
   display: flex;
   flex-direction: column; /* Alinea los elementos verticalmente */
   width: 100%;
-  min-height: 100%; /* Asegura que el contenedor ocupe al menos toda la pantalla */
+  min-height: 100vh; /*El contenedor crece dinamicamente segun su contenido y no se limita a un tamaño definido como lo fue 100vh*/
   background: linear-gradient(45deg, #1B1B2F, #53354A);
-  animation: backgroundShift 5s ease infinite;
+
 }
-
-
-@keyframes backgroundShift {
-  0% {background: linear-gradient(to right, #1B1B2F);}
-  100% {background: linear-gradient(to right, #53354A);}
-}
-
-
 
 .main-content {
   flex: 1; /* Permite que este contenedor crezca para ocupar espacio */
@@ -40,7 +24,6 @@ body {
   text-align: center;
   padding: 5% 20px;
   color: #ffffff;
-  margin: 0;
 }
 
 p {
@@ -48,33 +31,27 @@ p {
   font-weight: normal;
   font-size: 3vw;
   color: #ffffff;
-  margin-top: 20vh;
 }
 
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   font-size: 9vw;
-  text-align: center;
   letter-spacing: 2px;
   color: #ffffff;
-  line-height: 1.1;
-  margin: 0;
+  margin:0    
 }
 
+.spacer{
+  height: 300px;
+}
 .footer-text {
   padding: 15px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   font-size: 1vw;
   color: #ffffff;
-  width: 100%;
-}
-
-
-
-.spacer {
-  height: 30vh; /* Ajusta el espacio vertical adicional */
+  box-sizing: border-box;
 }
 
 .linea-separadora {
@@ -82,151 +59,27 @@ h1 {
   background-color: #E0E0E0;
 } 
 
-
-
-
-
 /* Media Queries */
 @media (max-width: 768px) {
+
   h1 {
     font-size: 10vw; /* Ajuste del tamaño del h1 en pantallas más pequeñas */
   }
 
   p {
     font-size: 4vw; /* Ajuste del tamaño del párrafo en pantallas más pequeñas */
+    margin-top: 70px;
   }
 
   footer{
     position: relative;
     bottom: 0;
   }
-}
 
-@media (max-width: 480px) {
-  h1 {
-    font-size: 10vw; /* Asegura que el h1 se ajuste aún más en pantallas muy pequeñas */
-  }
-
-  p {
-    font-size: 5vw; /* Asegura que el texto se ajuste también */
-  }
-
-  .footer-text{  
-    font-size: 2vw;
-    text-align: center;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-/*-------------------------------------------------------------*/
-.container {
-  height: 100%;
-  width: 300px;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.machine {
-  width: 60vmin;
-  fill: #ffffff; }
-
-.small-shadow, .medium-shadow, .large-shadow {
-  fill: rgba(0, 0, 0, 0.05); }
-
-.small {
-	animation: counter-rotation 6s infinite linear;
-  transform-origin: 100.136px 225.345px; }
-
-.small-shadow {
-	animation: counter-rotation 6s infinite linear;
-  transform-origin: 110.136px 235.345px; }
-
-.medium {
-	animation: rotation 9s infinite linear;
-  transform-origin: 254.675px 379.447px; }
-
-.medium-shadow {
-	animation: rotation 9s infinite linear;
-  transform-origin: 264.675px 389.447px; }
-
-.large {
-  animation: counter-rotation 12s infinite linear;
-  transform-origin: 461.37px 173.694px; }
-
-.large-shadow {  
-	animation: counter-rotation 12s infinite linear;
-  transform-origin: 471.37px 183.694px; 
-}
-
-@keyframes rotation {
-    from {transform: rotate(0deg);}
-    to   {transform: rotate(359deg);}
-}
-
-@keyframes counter-rotation {
-    from {transform: rotate(359deg);}
-    to   {transform: rotate(0deg);}
-}
- /*----------------HEADER--------------------------------*/
- /* Estilos para el header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 0px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: 100%; /* Asegura que el header ocupe toda la anchura */
-  box-sizing: border-box; /* Evita que el padding desborde */
-  overflow: hidden; /* Previene desbordamiento inesperado */
-}
-
-/* Estilo del logo */
-.logo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #171a3a;
-  white-space: nowrap; /* Evita que el logo haga salto de línea */
-}
-
-/* Estilos para la navegación */
-.nav {
-  display: flex;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 20px; /* Espaciado entre los elementos */
-  margin: 0;
-  padding: 0;
-}
-
-/* Estilos para cada enlace */
-.nav-item .nav-link {
-  font-family: 'Roboto', sans-serif;
-  text-decoration: none;
-  color: #171a3a;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.nav-item .nav-link:hover {
-  color: #1B1B2F ; /* Cambia el color al pasar el mouse */
-}
-
-/* Responsividad para dispositivos móviles */
-@media (max-width: 768px) {
   .header {
     flex-wrap: nowrap; /* Mantiene los elementos en una sola línea */
     justify-content: space-between; /* Logo a la izquierda, navegación a la derecha */
-    padding: 0 10px; /* Reduce el padding lateral en móviles */
+    padding: 0 10px 0px 0px; /* Reduce el padding lateral en móviles */
   }
 
   .logo {
@@ -251,15 +104,78 @@ h1 {
   }
 }
 
+@media (max-width: 480px) {
+  h1 {
+    font-size: 10vw; /* Asegura que el h1 se ajuste aún más en pantallas muy pequeñas */
+  }
 
-.logo {
+  p {
+    font-size: 5vw; /* Asegura que el texto se ajuste también */
+  }
+
+  .footer-text{  
+    font-size: 2vw;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+ /*----------------HEADER--------------------------------*/
+ /* Estilos para el header */
+.header {
   display: flex;
-  align-items: center; /* Alinea verticalmente el logo y el texto */
-  gap: 10px; /* Espacio entre el logo y el texto */
-  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0px 30px 0px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box; /* Evita que el padding desborde */
 }
 
-.logo img {
-  height: 80px; /* Ajusta el tamaño del logo según sea necesario */
-  width: auto; /* Mantiene la proporción del logo */
+/* Estilo del logo */
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #171a3a;
+  white-space: nowrap; /* Evita que el logo haga salto de línea */
 }
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Espaciado entre los elementos */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para cada enlace */
+.nav-item .nav-link {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: #171a3a;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-item .nav-link:hover {
+  color: #1B1B2F ; /* Cambia el color al pasar el mouse */
+}
+
+/* Responsividad para dispositivos móviles */
+  .logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el logo y el texto */
+    gap: 10px; /* Espacio entre el logo y el texto */
+    flex-shrink: 0;
+  }
+
+  .logo img {
+    height: 80px; /* Ajusta el tamaño del logo según sea necesario */
+    width: auto; /* Mantiene la proporción del logo */
+  }
