@@ -27,6 +27,14 @@ function App() {
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
+<<<<<<< HEAD
+=======
+        <NavbarItem>
+          <Link href="#" aria-current="page">
+            Home
+          </Link>
+        </NavbarItem>
+>>>>>>> develop
         <NavbarItem isActive>
           <Link color="foreground" href="#">
             About Us
