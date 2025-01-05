@@ -38,7 +38,7 @@ function App() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-4" justify="center"> 
         <NavbarItem>
           <Link 
             color={currentSection === "home" ? "main" : "foreground"}
