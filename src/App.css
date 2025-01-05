@@ -13,12 +13,10 @@ body{
 }
 
 .background {
-  display: flex;
-  flex-direction: column; /* Alinea los elementos verticalmente */
+  display: grid;
   width: 100%;
-  min-height: 100vh; /*El contenedor crece dinamicamente segun su contenido y no se limita a un tamaño definido como lo fue 100vh*/
-  /*background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);*/
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  min-height: 100dvh; /*El contenedor crece dinamicamente segun su contenido y no se limita a un tamaño definido como lo fue 100vh*/
+  grid-template-rows: auto 1fr auto;
 }
 
 .w-full{
@@ -41,11 +39,10 @@ body{
   align-items: center; /* Centrado horizontal */
   text-align: center;
   padding: 5% 20px;
-  color: #ffffff;
 }
 
 
-.text {
+.text-home {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   font-size: 3vw;
@@ -72,10 +69,8 @@ h1 {
   font-size: 1vw;
   color: #ffffff;
   box-sizing: border-box;
+  
 }
-
-
-
 
 
 @media (max-width: 480px) {
