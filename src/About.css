@@ -1,0 +1,162 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 70px; /* Espaciado entre tarjetas */
+  justify-content: start; /* Centrado horizontal */
+  align-items: start; /* Cetrado vertical */
+}
+
+.about-us {
+  padding: 40px 20px; /* Espaciado general */
+  max-width: 1200px;
+  margin: 0 auto; /* Centrar la sección en pantalla */
+
+
+  flex: 1; /* Permite que este contenedor crezca para ocupar espacio */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrado vertical */
+  align-items: center; /* Centrado horizontal */
+  text-align: center;
+  padding: 5% 20px;
+}
+
+.spacer{
+  height: 300px;
+}
+
+/* Animaciones */
+@keyframes fadeIn { /* Fade-in con CSS*/
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.main-text {
+  font-family: "Inter", serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto; /* Centra el párrafo principal */
+  line-height: 1.8; /* Espaciado entre líneas */
+  color: #ffffff; /* Gris claro para legibilidad */
+  margin-bottom: 120px;
+  padding-bottom: 150px;
+  margin-top: 35px; /* Espaciado inferior */
+  animation: fadeIn 2s ease-in-out; /* Fade-in con CSS*/
+  /* animation: slideIn 1s ease-out; */
+}
+
+.text-white {
+  color: #ffffff; /* Blanco */
+}
+
+.text-blue {
+  color: #FFC857; /* Azul verdoso */
+}
+
+
+.title-icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.title-icon-container h4 {
+  font-family: 'Poppins', sans-serif;
+  margin: 0; /* Asegúrate de que no haya márgenes innecesarios */
+  font-size: 3rem; /* Ajusta el tamaño del título según lo que prefieras */
+  color: #FFC857 ; /* Estilo del color del título */
+  font-weight: 400;
+  text-transform: uppercase;
+  /* text-shadow: 5px 5px 45px ; */
+  
+}
+
+.item-content{
+  text-align: start;
+  font-size: 1.7rem;
+  color: #ffffff;
+  font-family: "Inter", serif;
+  font-weight: 400;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+  
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .main-text {
+    font-size: 28px; /* Reducir tamaño del texto */
+    margin-bottom: 60px;
+  }
+
+  .container {
+    gap: 60px; /* Reducir espacio entre los íconos */
+  }
+
+  .icon-container {
+    flex-direction: column;
+    align-items: center; /* Centrar los íconos y el contenido en móvil */
+    gap: 20px;
+  }
+
+  .title-icon-container {
+    flex-direction: column;
+    align-items: center; /* Centrar los títulos y íconos */
+    gap: 10px;
+  }
+
+  .title-icon-container h4 {
+    font-size: 2.2rem; /* Reducir tamaño del título */
+  }
+
+  .item-content {
+    font-size: 1.4rem; /* Reducir tamaño del texto en móvil */
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-text {
+    font-size: 24px; /* Reducir aún más el tamaño del texto */
+  }
+
+  .title-icon-container h4 {
+    font-size: 2rem; /* Reducir tamaño de título en pantallas pequeñas */
+  }
+
+  .item-content {
+    font-size: 1.2rem; /* Reducir aún más el tamaño del texto en pantallas pequeñas */
+  }
+}
+
+/* Define un color de selección personalizado en CSS */
+.selected-item {
+  color: #150655; /* Aquí puedes poner el color que prefieras para los enlaces activos */
+}
+
