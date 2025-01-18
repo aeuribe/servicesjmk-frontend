@@ -33,7 +33,7 @@ function About() {
                 <h4>Our Experience</h4>
             </div>
             <p className="item-content">
-              With over 24 years of expertise, we deliver personalized, high-quality solutions for industrial maintenance and facility management.
+              With over 25 years of expertise, we deliver personalized, high-quality solutions for industrial maintenance and facility management.
             </p>
           </div>
         </div>

@@ -16,7 +16,7 @@ function Contact() {
                 contact@servicesjmk.com
             </a>
             </div>
-            <div className="contact-item">
+            {/* <div className="contact-item">
             <FaWhatsapp className="contact-icon" />
             <a
                 href="https://wa.me/17863158321"
@@ -26,7 +26,7 @@ function Contact() {
             >
                 Chat with us.
             </a>
-            </div>
+            </div> */}
         </div>
             <div className="spacer"></div>
         </div>
