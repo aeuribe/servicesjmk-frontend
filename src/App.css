@@ -7,6 +7,11 @@ body{
   margin:0;
 }
 
+main { 
+  width: 100%;
+  overflow: hidden; /* Para evitar desbordamientos */
+}
+
 /* Esto coloca los items del navbar centrados*/
 .justify-between {
   justify-content: center;
@@ -19,6 +24,7 @@ body{
   grid-template-rows: auto 1fr auto;
 }
 
+/*Estilos aplicados al header*/
 .w-full{
   max-width: 100vw;
 }

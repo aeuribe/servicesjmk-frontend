@@ -1,6 +1,6 @@
 import {useState} from "react"
 import "./App.css"
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link} from "@heroui/react";
 import {AcmeLogo} from "./AcmeLogo.jsx";
 import About from "./AboutUs.jsx"
 import Contact from "./Contact.jsx"

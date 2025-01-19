@@ -1,4 +1,31 @@
-.title{
+.container-contact{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide la pantalla en 2 partes iguales */
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+}
+
+.formulario{
+  align-items: center;
+  padding: 0 5vw 0 5vw;
+}
+
+.input-names{
+  display: flex;
+  flex-direction: row;
+}
+.input{
+  padding: 5px;
+}
+
+.input-text-area{
+  padding: 5px 5px 0 5px;
+}
+.contact-us-title{
     font-family: 'Poppins', sans-serif;
     margin: 0; /* Asegúrate de que no haya márgenes innecesarios */
     font-size: 0.8rem; /* Ajusta el tamaño del título según lo que prefieras */
@@ -23,8 +50,7 @@
     flex-direction: column;
     align-items: flex-start; /* Centrado horizontal */
     text-align: left;
-    padding-left: 25vw;
-    padding-right: 25vw;
+    padding: 0 5vw 0 5vw;
     animation: fadeIn 2s ease-in-out, slideIn 1s ease-out;
 
 }
@@ -79,7 +105,6 @@
   
   /* Consultas de medios para hacerlo responsive */
 
-/* Pantallas pequeñas (menos de 768px) */
 /* Pantallas pequeñas (menos de 768px) */
 @media (max-width: 768px) {
     /* Ajusta el tamaño de los textos en pantallas pequeñas */
