@@ -1,10 +1,10 @@
 import {useState} from "react"
 import "./App.css"
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link} from "@heroui/react";
-import {AcmeLogo} from "./AcmeLogo.jsx";
-import About from "./AboutUs.jsx"
-import Contact from "./Contact.jsx"
-import LayeredBackground from "./LayeredBackground.jsx"
+import {ServicesJMKLogo} from "../assets/ServicesJMKLogo.jsx";
+import About from "./about/AboutUs.jsx"
+import Contact from "./contact/Contact.jsx"
+import LayeredBackground from "../assets/LayeredBackground.jsx"
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +33,7 @@ function App() {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <AcmeLogo />
+          <ServicesJMKLogo />
           <p className="font-bold text-inherit">Services JMK, LLC</p>
         </NavbarBrand>
       </NavbarContent>

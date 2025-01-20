@@ -1,8 +1,8 @@
 import React from "react";
 import "./About.css";
-import MedalIcon from "./MedalIcon";
-import GearIcon from "./GearIcon";
-import HandshakeIcon from "./HandshakeIcon";
+import MedalIcon from "./assets/MedalIcon.jsx";
+import GearIcon from "./assets/GearIcon.jsx";
+import HandshakeIcon from "./assets/HandshakeIcon.jsx";
 
 function About() {
 
