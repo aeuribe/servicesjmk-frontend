@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'http://localhost:3000/enviar-correo';
+const API_URL = 'https://servicesjmk-backend-production.up.railway.app:8080/enviar-correo';
 
 // Enviar formulario
 export const sendForm = async (formData) => {
