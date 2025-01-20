@@ -1,8 +1,8 @@
 import React from "react";
 import "./About.css";
-import MedalIcon from "./MedalIcon";
-import GearIcon from "./GearIcon";
-import HandshakeIcon from "./HandshakeIcon";
+import MedalIcon from "./assets/MedalIcon.jsx";
+import GearIcon from "./assets/GearIcon.jsx";
+import HandshakeIcon from "./assets/HandshakeIcon.jsx";
 
 function About() {
 
@@ -33,7 +33,7 @@ function About() {
                 <h4>Our Experience</h4>
             </div>
             <p className="item-content">
-              With over 24 years of expertise, we deliver personalized, high-quality solutions for industrial maintenance and facility management.
+              With over 25 years of expertise, we deliver personalized, high-quality solutions for industrial maintenance and facility management.
             </p>
           </div>
         </div>
