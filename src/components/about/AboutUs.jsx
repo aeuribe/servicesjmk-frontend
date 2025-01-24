@@ -3,14 +3,16 @@ import "./About.css";
 import MedalIcon from "./assets/MedalIcon.jsx";
 import GearIcon from "./assets/GearIcon.jsx";
 import HandshakeIcon from "./assets/HandshakeIcon.jsx";
+import { useTranslation } from "react-i18next";
 
 function About() {
+  const { t } = useTranslation();
 
   return (
     <div className="about-us">
       <p className="main-text">
-        <span className="text-white">We are a company specializing in the industrial production sector, </span>
-        <span className="text-blue">offering a wide range of services to support and enhance our clients' operations.</span>
+        <span className="text-white">{t('aboutUs.paragraph-1')} </span>
+        <span className="text-blue">{t('aboutUs.paragraph-2')}</span>
       </p>
 
       <div className="container">
@@ -18,10 +20,10 @@ function About() {
           <GearIcon className="icon"/>
           <div>
             <div className="title-icon-container">
-              <h4>What We Do</h4>
+              <h4>{t('aboutUs.whatWeDo-title')}</h4>
             </div>
             <p className="item-content">
-              Pre-project consultancy, equipment design and assembly, maintenance programs, and repairs for operational efficiency.
+              {t('aboutUs.whatWeDo-description')}
             </p>
           </div>
         </div>
@@ -30,10 +32,12 @@ function About() {
           <MedalIcon className="icon"/>
           <div>
             <div className="title-icon-container">
-                <h4>Our Experience</h4>
+                <h4>
+                  {t('aboutUs.ourExperience-title')}
+                </h4>
             </div>
             <p className="item-content">
-              With over 25 years of expertise, we deliver personalized, high-quality solutions for industrial maintenance and facility management.
+            {t('aboutUs.ourExperience-description')}
             </p>
           </div>
         </div>
@@ -42,10 +46,12 @@ function About() {
           <HandshakeIcon />
           <div>
             <div className="title-icon-container">
-                <h4>Our Commitment</h4>
+                <h4>
+                  {t('aboutUs.ourCommitment-title')}
+                </h4>
             </div>
             <p className="item-content">
-              Adapting to client-specific needs with precision, dedication, and excellence.
+              {t('aboutUs.ourCommitment-description')}
             </p>
           </div>
         </div>

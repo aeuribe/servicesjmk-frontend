@@ -3,11 +3,14 @@ import "./Contact.css";
 import { FaEnvelope, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import {Form, Input, Button, Textarea} from "@heroui/react";
 import { sendForm } from "../../services/mailsenderService.js"
+import { useTranslation } from "react-i18next";
+
 
 function Contact() {
     const [submitted, setSubmitted] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const { t } = useTranslation();
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -15,7 +18,7 @@ function Contact() {
         const data = Object.fromEntries(new FormData(e.currentTarget)); // Convertir FormData a objeto JSON
 
         setLoading(true);
-
+        
         setError(null);
 
         sendForm(data)
@@ -43,7 +46,9 @@ function Contact() {
         <div className="container-contact">
 
             <div className="contact-us">                
-                <p className="get-in-touch-text">Get in touch with us.</p>
+                <p className="get-in-touch-text">
+                    {t("contactUs.getInTouch")}
+                </p>
                     <div className="contact-icon-link">
                         <FaEnvelope className="contact-icon" />
                         <a href="mailto:info@servicesjmk.com" className="contact-link">
@@ -54,8 +59,8 @@ function Contact() {
 
             <div className="formulario">
                 <h2 className="form-title">
-                    <span>Need help? </span>
-                    <span className="contact-us-yellow-text"> Contact us.</span>
+                    <span>{t("contactUs.form-title-1")}</span>
+                    <span className="contact-us-yellow-text">{t("contactUs.form-title-2")}</span>
                 
                 </h2>
                 <Form className="w-full max-w-xs" validationBehavior="native" onSubmit={onSubmit} style={formStyle}>
@@ -63,37 +68,38 @@ function Contact() {
                         <div className="input-names">
                             <Input
                                 isRequired
-                                errorMessage="Please enter a valid first name"
+                                errorMessage={t('contactUs.Form.ErrorMessage.name')}
                                 labelPlacement="outside"
                                 name="first_name"
-                                placeholder="First Name"
+                                placeholder={t('contactUs.Form.first-name')}
                                 type="string"
                                 className="input"
                             />
                             <Input
                                 isRequired
-                                errorMessage="Please enter a valid last name"
+                                errorMessage={t('contactUs.Form.ErrorMessage.last-name')}
                                 labelPlacement="outside"
                                 name="last_name"
-                                placeholder="Last Name"
+                                placeholder={t('contactUs.Form.last-name')}
                                 type="string"
                                 className="input"
                             />
                         </div>
                         <Input
                                 isRequired
-                                errorMessage="Please enter a valid last email"
+                                errorMessage={t('contactUs.Form.ErrorMessage.email')}
                                 labelPlacement="outside"
                                 name="email"
-                                placeholder="Email"
+                                placeholder={t('contactUs.Form.email')}
                                 type="email"
                                 className="input"
                             />
                         <Textarea 
                             isRequired
+                            errorMessage={t('contactUs.Form.ErrorMessage.message')}
                             className="max-w-xs input-text-area"  
                             name="message"
-                            placeholder="Enter your message" 
+                            placeholder={t('contactUs.Form.message')} 
                         />
                     </div>
 
@@ -107,7 +113,7 @@ function Contact() {
                             name="button-submit"
                         >
 
-                            {loading ? "Loading..." : submitted ? "Submitted" : "Submit"}
+                            {loading ? t('contactUs.Form.loading') : submitted ? t('contactUs.Form.submitted') : t('contactUs.Form.submit')}
                         </Button>
 
                 </Form>

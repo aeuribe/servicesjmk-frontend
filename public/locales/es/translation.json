@@ -1,0 +1,48 @@
+{
+    "header": {
+        "home": "Inicio",
+        "about": "Acerca de",
+        "contact": "Contacto",
+        "Language": {
+            "en":"Inglés",
+            "es": "Español"
+        }
+    },
+    "footer":{
+        "rights":"Todos los derechos reservados."
+    },
+    "home": {
+        "title": "Nos estamos preparando para el próximo paso",
+        "subtitle": "PRÓXIMAMENTE"
+    },
+    "aboutUs":{
+        "paragraph-1": "Somos una empresa especializada en el sector industrial, ",
+        "paragraph-2": "ofreciendo una amplia gama de servicios para impulsar y optimizar las operaciones de nuestros clientes.",
+        "whatWeDo-title":"Nuestros Servicios",
+        "whatWeDo-description": "Consultoría previa a proyectos, diseño y montaje de equipos, programas de mantenimiento y reparaciones para garantizar la eficiencia operativa.",
+        "ourExperience-title": "Nuestra Experiencia",
+        "ourExperience-description": "Con más de 24 años de experiencia, brindamos soluciones personalizadas de alta calidad para el mantenimiento industrial y la gestión de instalaciones.",
+        "ourCommitment-title": "Nuestro Compromiso",
+        "ourCommitment-description": "Nos comprometemos a ofrecer soluciones personalizadas y de alta calidad, adaptadas a las necesidades específicas de cada cliente. "
+    },   
+    "contactUs":{
+        "getInTouch": "Ponte en contacto con nosotros.",
+        "form-title-1": "¿Necesitas ayuda?",
+        "form-title-2": "Contáctanos.",
+        "Form": {
+            "first-name":"Nombre",
+            "last-name": "Apellido",
+            "email": "Correo electrónico",
+            "message": "Ingrese su mensaje",
+            "submit":"Enviar",
+            "loading":"Enviando...",
+            "submitted":"Enviado",
+            "ErrorMessage": {
+                "name": "Por favor ingrese un nombre válido",
+                "last-name":"Por favor ingrese un apellido válido",
+                "email":"Por favor ingrese un correo electrónico válido",
+                "message":"Por favor ingrese un mensaje válido"
+            }
+        }
+    }
+}

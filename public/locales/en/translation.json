@@ -1,0 +1,48 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact",
+        "Language": {
+            "en":"English",
+            "es": "Spanish"
+        }
+    },
+    "footer":{
+        "rights":"All rights reserved."
+    },
+    "home": {
+        "title": "We are preparing for the next step",
+        "subtitle": "COMING SOON"
+    },
+    "aboutUs":{
+        "paragraph-1": "We are a company specializing in the industrial production sector, ",
+        "paragraph-2": "offering a wide range of services to support and enhance our clients' operations.",
+        "whatWeDo-title": "What We Do",
+        "whatWeDo-description": "Pre-project consultancy, equipment design and assembly, maintenance programs, and repairs for operational efficiency.",
+        "ourExperience-title": "Our Experience",
+        "ourExperience-description": "With over 25 years of expertise, we deliver personalized, high-quality solutions for industrial maintenance and facility management.",
+        "ourCommitment-title": "Our Commitment",
+        "ourCommitment-description": "We are committed to offering personalized, high-quality solutions tailored to each client's specific needs."
+    },
+    "contactUs":{
+        "getInTouch": "Get in touch with us.",
+        "form-title-1": "Need help? ",
+        "form-title-2": "Contact us.",
+        "Form": {
+            "first-name":"First Name",
+            "last-name": "Last Name",
+            "email": "Email",
+            "message": "Enter your message",
+            "submit":"Submit",
+            "loading":"Loading...",
+            "submitted":"Submitted",
+            "ErrorMessage": {
+                "name": "Please enter a valid name",
+                "last-name":"Please enter a valid last name",
+                "email":"Please enter a valid email",
+                "message":"Please enter a valid message"
+            }
+        }
+    }
+}
