@@ -17,11 +17,17 @@ export default function TranslateDropdown() {
     setSelectedLanguage(i18n.language); // Sincronizar si cambia externamente
   }, [i18n.language]);
 
+  const languageName = {
+    en: t("header.Language.en"),
+    es: t("header.Language.es"),
+  }[selectedLanguage] || selectedLanguage;
+
   return (
     <Dropdown>
       <DropdownTrigger>
         <Button className="capitalize" variant="light" radius="full">
           <GrLanguage />
+          <span>{languageName}</span>
         </Button>
       </DropdownTrigger>
       <DropdownMenu
