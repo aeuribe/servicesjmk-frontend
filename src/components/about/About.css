@@ -87,7 +87,7 @@
   font-size: 3rem; /* Ajusta el tamaño del título según lo que prefieras */
   color: #FFC857 ; /* Estilo del color del título */
   font-weight: 400;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   /* text-shadow: 5px 5px 45px ; */
   
 }
