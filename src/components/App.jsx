@@ -13,6 +13,7 @@ import {
 import { ServicesJMKLogo } from "../assets/ServicesJMKLogo.jsx";
 import About from "./about/AboutUs.jsx";
 import Contact from "./contact/Contact.jsx";
+import Home from "./home/Home.jsx"
 import LayeredBackground from "../assets/LayeredBackground.jsx";
 import { useTranslation } from "react-i18next";
 import TranslateDropdown from "../assets/TranslateDropdown.jsx";
@@ -34,7 +35,7 @@ function App() {
     <div className="background">
       <LayeredBackground />
       <Navbar
-        shouldHideOnScroll
+        /* shouldHideOnScroll */
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
       >
@@ -113,12 +114,13 @@ function App() {
       {/* Renderizado condicional de las secciones */}
       <main>
         {currentSection === "home" && (
-          <>
+/*           <>
             <div className="main-content">
               <p className="text-home">{t("home.title")}</p>
               <h1>{t("home.subtitle")}</h1>
             </div>
-          </>
+          </> */
+          <Home/>
         )}
         {currentSection === "about" && (
           <>

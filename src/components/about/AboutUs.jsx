@@ -1,9 +1,11 @@
 import React from "react";
 import "./About.css";
-import MedalIcon from "./assets/MedalIcon.jsx";
-import GearIcon from "./assets/GearIcon.jsx";
-import HandshakeIcon from "./assets/HandshakeIcon.jsx";
+
+import AboutCard from "./AboutCard.jsx"
 import { useTranslation } from "react-i18next";
+import image1 from './assets/image1.png';
+import image2 from './assets/image2.png';
+import image3 from './assets/image3.png';
 
 function About() {
   const { t } = useTranslation();
@@ -15,47 +17,31 @@ function About() {
         <span className="text-blue">{t('aboutUs.paragraph-2')}</span>
       </p>
 
-      <div className="container">
-        <div className="icon-container">
-          <GearIcon className="icon"/>
-          <div>
-            <div className="title-icon-container">
-              <h4>{t('aboutUs.whatWeDo-title')}</h4>
-            </div>
-            <p className="item-content">
-              {t('aboutUs.whatWeDo-description')}
-            </p>
-          </div>
+      <div className="row">
+        <div className="col-md-4">
+          <AboutCard
+            title={t('aboutUs.whatWeDo-title')}
+            imgSource={image1}
+            text={t('aboutUs.whatWeDo-description')}
+          />
+        </div>  
+        <div className="col-md-4">
+          <AboutCard
+            title={t('aboutUs.ourExperience-title')}
+            imgSource={image2}
+            text={t('aboutUs.ourExperience-description')}
+          />
         </div>
-
-        <div className="icon-container">
-          <MedalIcon className="icon"/>
-          <div>
-            <div className="title-icon-container">
-                <h4>
-                  {t('aboutUs.ourExperience-title')}
-                </h4>
-            </div>
-            <p className="item-content">
-            {t('aboutUs.ourExperience-description')}
-            </p>
-          </div>
+        <div className="col-md-4">
+          <AboutCard
+            title={t('aboutUs.ourCommitment-title')}
+            imgSource={image3}
+            text={t('aboutUs.ourCommitment-description')}
+          />  
         </div>
-        
-        <div className="icon-container">
-          <HandshakeIcon />
-          <div>
-            <div className="title-icon-container">
-                <h4>
-                  {t('aboutUs.ourCommitment-title')}
-                </h4>
-            </div>
-            <p className="item-content">
-              {t('aboutUs.ourCommitment-description')}
-            </p>
-          </div>
-        </div>
+                    
       </div>
+  
     </div>
   );
 }
