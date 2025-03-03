@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardBody, Image, Divider } from "@heroui/react";
-import "./Card.css";
+import "../styles/Card.css";
 
 export default function AboutCard({ title, imgSource, text }) {
   return (

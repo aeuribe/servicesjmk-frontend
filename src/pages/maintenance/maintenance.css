@@ -1,0 +1,183 @@
+.maintenance-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.maintenance-main-text {
+  margin: 100px 0px 150px 0px;
+  text-align: justify;  
+  font-family: "Inter", serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.8;
+  max-width: 750px;
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+/* 🔹 Tarjetas de Mantenimiento */
+.card-preventive,
+.card-corrective {
+  display: flex;
+  flex-wrap: wrap; /* Para mejor adaptación en pantallas pequeñas */
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 150px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s ease-in-out forwards;
+  min-height: 310px;
+}
+
+/* 🔹 Títulos de las tarjetas */
+.card-preventive-title,
+.card-corrective-title {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  text-align: center;
+  background-color: hsla(0, 0%, 100%, 1);
+  padding: 50px;
+  min-width: 300px;
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-preventive-title:hover,
+.card-corrective-title:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-preventive-title {
+  border-top: 5px solid rgb(220, 220, 220);
+  border-right: 10px solid rgb(220, 220, 220);
+  border-radius: 150px 0px 150px 10px;
+}
+
+.card-corrective-title {
+  border-top: 5px solid rgb(220, 220, 220);
+  border-left: 10px solid rgb(220, 220, 220);
+  border-radius: 0px 150px 10px;
+}
+
+/* 🔹 Texto de las tarjetas */
+.card-preventive-text,
+.card-corrective-text {
+  display: flex;
+  flex: 1;
+  text-align: justify;
+  justify-content: center;
+  padding: 50px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out 0.5s forwards;
+}
+
+/* 🔹 Estilo de los títulos */
+.card-preventive h2,
+.card-corrective h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #150655;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  align-self: center;
+  justify-content: center;
+}
+
+.card-preventive h2:hover,
+.card-corrective h2:hover {
+  transform: scale(1.1);
+}
+
+/* 🔹 Estilo del texto */
+.card-preventive p,
+.card-corrective p {
+  font-size: 1.4em;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s ease;
+}
+
+.card-preventive p:hover,
+.card-corrective p:hover {
+  transform: scale(1.05);
+}
+
+/* 🔹 Colores para identificar el tipo de mantenimiento */
+.preventive-text {
+  color: #ffc857; /* Amarillo */
+  font-weight: bold;
+}
+
+.corrective-text {
+  color: #ff5252; /* Rojo */
+  font-weight: bold;
+}
+
+/* 🔹 Estilos Responsivos */
+@media (max-width: 768px) {
+  .card-preventive,
+  .card-corrective {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-preventive-title,
+  .card-corrective-title {
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-preventive-text,
+  .card-corrective-text {
+    padding: 30px;
+    width: 100%;
+  }
+}
+
+.maintenance-button{
+  font-size: 1em;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* 🔹 Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

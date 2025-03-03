@@ -1,0 +1,29 @@
+.subheader {
+    position: fixed;
+    top: 60px; /* Ajusta según la altura del header principal */
+    width: 100%;
+    background-color: #f8f9fa;
+    z-index: 1000;
+  }
+
+  .white-navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+  }
+
+  .home-link-container{
+    justify-content: center;
+  }
+  
+  .link-subheader{
+    padding: 0 10px 0 10px;
+  }
+
+  .disabled-link {
+    pointer-events: none;
+    cursor: default;
+  }
+  

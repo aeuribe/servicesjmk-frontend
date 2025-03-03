@@ -1,0 +1,212 @@
+  .spacer{
+      height:700px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .dropdown-trigger {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .arrow {
+      font-size: 12px;
+    }
+    
+    .dropdown {
+      position: relative;
+      z-index: 9999;
+    }
+    
+    .dropdown-menu {
+      position: absolute; /* Cambiado de absolute a fixed */
+      top: auto; /* Ajustar según sea necesario */
+      left: auto; /* Ajustar según sea necesario */
+      background: white;
+      border: 1px solid #ddd;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      padding: 5px 0;
+      z-index: 99999999 !important; /* Incrementado aún más */
+      border-radius: 2px;
+      
+      /* Oculto por defecto */
+      opacity: 0;
+      transform: translateY(-10px);
+      visibility: hidden;
+      transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    }
+    
+    /* Cuando el dropdown está activo */
+    .dropdown.open .dropdown-menu {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+    
+    .dropdown-item {
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+      display: block;
+    }
+    
+    .dropdown-item:hover {
+      background: #dad9d9;
+    }
+    
+    /* Asegurarse de que el contenedor del dropdown no interfiera */
+    .dropdown-container {
+      position: static !important;
+    }
+    
+    /* Ajuste adicional para garantizar visibilidad */
+    body .dropdown-menu {
+      z-index: 1000;
+    }
+    
+    .home-main-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem; /* Espacio entre imagen y texto */ 
+      height: 100dvh;
+    }
+    
+    /* Estiliza la imagen */
+    .home-image-area {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100dvh;
+      position: relative;
+    
+      /* Clip-path mantiene la forma abstracta */
+      clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+    
+      /* Fondo con degradado */
+      background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.7));
+      /* background:white; */
+    
+      /* Agregar máscara de desenfoque en los bordes */
+    }
+    
+
+    
+    .home-image {
+      max-width: 80%; /* Reduce el tamaño para mejor proporción */
+      height: auto;
+      transition: transform 0.3s ease-in-out;
+
+    }
+    
+    .home-image:hover {
+      transform: scale(1.05); /* Efecto sutil al pasar el mouse */
+    }
+    
+    /* Estiliza el texto */
+    .home-text-area {
+      flex: 1;
+      text-align: right;
+      padding-right: 100px;
+    }
+    
+    .home-text-area h1 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 5rem;
+      font-weight: 200; /* Más grueso */
+      letter-spacing: 1px; /* Espaciado más elegante */
+      color: white;
+      margin-bottom: 1rem;
+    }
+    
+    .home-text-area p {
+      font-family: "Inter", sans-serif;
+      font-size: 2rem;
+      color: #ffffff;
+      line-height: 1.8;
+      max-width: 90%;
+      margin-left: auto;
+      text-align: justify;
+      padding: 0px 20px 0px 20px;
+  }
+    
+    .highlight {
+      color: white; /* Naranja fuerte */
+      font-weight: 600;
+      text-shadow: 2px 2px #150655;
+    }
+    
+    .highlight-p {
+      color: white; /* Naranja fuerte */
+      font-weight: 600;
+      text-shadow: 2px 2px #150655;   
+    }
+
+  /* Responsividad */
+  @media (max-width: 1024px) {
+    .home-main-container {
+        flex-direction: column;
+        height: auto;
+        gap: 2rem;
+    }
+
+    .home-image-area {
+        clip-path: none;
+        border-radius: 0px 100px 100px 100px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .home-image {
+        max-width: 100%;
+    }
+
+    .home-text-area {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .home-text-area h1 {
+        font-size: 5rem;
+    }
+
+    .home-text-area p {
+        font-size: 2rem;
+        text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .home-text-area h1 {
+        margin-top: 20px;
+        font-size: 3rem;
+    }
+
+    .home-text-area p {
+        font-size: 1.8rem;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .home-text-area h1 {
+        font-size: 2rem;
+    }
+
+    .home-text-area p {
+        font-size: 1rem;
+    }
+  }
